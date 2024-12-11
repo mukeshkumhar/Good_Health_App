@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackground"
+    tools:context=".EmergencyActivity">
+
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:orientation="vertical">
+        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:id="@+id/emergencyBackBtn"
+                android:contentDescription="back button"
+                android:background="@color/cardBackground"
+                android:layout_weight="0"
+                android:src="@drawable/back_arrow"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_marginRight="50sp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:text="Emergency Calls"/>
+        </LinearLayout>
+
+
+
+
+
+
+<!--        top Card-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            app:cardCornerRadius="10sp"
+            app:cardBackgroundColor="@color/fadeText">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:layout_marginEnd="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AMBULANCE"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="102"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/ambulanceBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:layout_marginStart="10sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:layout_marginEnd="20sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="POLICE"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100 | 112 National Emergency"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/policeBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="200sp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:layout_marginEnd="20sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FIRE"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="101"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/fireBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+<!--        bottom card-->
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10sp"
+            app:cardBackgroundColor="@color/fadeText"
+            android:layout_marginBottom="10sp"
+
+            android:background="@color/fadeText">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="start"
+                            android:layout_marginEnd="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WOMEN HELPLINE"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1097"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/womenhelpBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="start"
+                            android:layout_marginEnd="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WOMEN HELPLINE"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="181 Domestic Abuse"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/womendomeBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="start"
+                            android:layout_marginEnd="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RAILWAY ENQUIRY"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="139"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/railwayEnqBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="start"
+                            android:layout_marginEnd="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SENIOR CITIZEN"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14567"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/seniorCitiBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="start"
+                            android:layout_marginEnd="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ROAD ACCIDENT"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1073"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/roadAcciBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    app:cardCornerRadius="10sp"
+                    android:layout_marginBottom="10sp"
+                    app:cardBackgroundColor="#A5CDFC">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:layout_gravity="start"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="start"
+                            android:layout_marginEnd="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CYBER CRIME"
+                                android:textColor="#0047FF"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="155620"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/cyberCrimeBtn"
+                            android:layout_width="120sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@drawable/call_btn"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="CALL">
+                        </androidx.appcompat.widget.AppCompatButton>
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>

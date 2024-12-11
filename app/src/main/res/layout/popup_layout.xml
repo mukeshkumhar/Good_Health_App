@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:foregroundGravity="center"
+    android:backgroundTint="@color/cardBackground"
+    app:cardBackgroundColor="@color/cardBackground"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10sp"
+    app:cardElevation="4dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alex_brush"
+        android:text="Explanation"
+        android:textColor="@color/answerTxt"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/explanationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+        android:lineSpacingExtra="5sp"
+        android:shadowColor="#6384E2"
+        android:text="Hello bro popup text appere here and it wishow like this"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+</ScrollView>

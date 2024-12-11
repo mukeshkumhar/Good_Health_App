@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:autofillHints="Search about health"
+            android:background="@drawable/custum_edittxt"
+            android:drawableStart="@drawable/search_icon_bar"
+            android:drawablePadding="10dp"
+            android:hint="Ask any think about health"
+            android:minHeight="48dp"
+            android:padding="10sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/answerHint"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/voicebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="30sp"
+                android:text="Voice input" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="30sp"
+                android:onClick="modelcall"
+                android:text="Get Answer" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loding_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/outputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custum_anstxt"
+            android:fontFamily="@font/crimson_pro_bold"
+            android:hint="Your Answer Apper hear"
+            android:textSize="16sp"
+            android:padding="15sp"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textColor="@color/answerTxt"
+            android:textColorHint="@color/answerHint"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clearText"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10sp"
+            android:text="Clear Answer"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/searchMedicineBtn"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_margin="10sp"
+            android:text="Search Medicine"
+            android:drawableLeft="@drawable/pill"
+            android:paddingLeft="30sp"
+            android:drawablePadding="0sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/medicinebtn"/>
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--        Card 1-->
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cardRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!--        vertical card 1-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90sp"
+            android:layout_margin="5sp"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:cardCornerRadius="10sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5sp"
+                    app:cardBackgroundColor="@color/RedColour"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/baseline_call_24" />
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:id="@+id/emergencybtn"
+                    android:textColor="@color/white"
+                    android:background="@drawable/emergency_back"
+                    android:layout_margin="5sp"
+                    android:text="EMERGENCY\nCALL"
+                    />
+                    
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/cardBackground"
+            android:layout_margin="6dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:padding="10sp"
+                        android:text="Share this app with your Friends and Famely ❤️"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/shareBtn"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16sp"
+                        android:background="@drawable/square_btn"
+                        android:textSize="20sp"
+                        android:drawableStart="@drawable/share_svg"
+                        android:textColor="@color/white"
+                        android:text="Share"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/linkedInbtn"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/square_btn"
+                        android:contentDescription="@string/link"
+                        android:drawableLeft="@drawable/linkedin_svg"
+                        android:paddingHorizontal="30sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/githubBtn"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/square_btn"
+                        android:contentDescription="@string/link"
+                        android:paddingHorizontal="30sp"
+                        android:drawableLeft="@drawable/github_svg"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/browserBtn"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/square_btn"
+                        android:contentDescription="@string/link"
+                        android:paddingHorizontal="30sp"
+                        android:drawableLeft="@drawable/browser_svg"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/instagramBtn"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/square_btn"
+                        android:contentDescription="@string/link"
+                        android:paddingHorizontal="30sp"
+                        android:drawableLeft="@drawable/instagram_svg"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>
